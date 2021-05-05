@@ -2,34 +2,34 @@
 #define N 100
 int main()
 {
-    int arr[N], i, j, n, search, found = 0;
+    int arr1[N], n, i, j, ctr ;
 
     printf("Enter the size of your array: ");
     scanf("%d", &n);
+    for (i = 0; i < n; i++)
+    {
+        printf("The digit off %d index's is: ", i);
+        scanf("%d", &arr1[i]);
+    }
+
+    printf("\nThe unique elements is/are:");
 
     for (i = 0; i < n; i++)
     {
-        scanf("%d", &arr[i]);
-    }
-    printf("Unique: ");
-    for (i = 0; i < n; i++)
-    {
-        found = 0;
-        for (j = 0; j <= n ; j++)
+        ctr = 0;
+        for (j = 0; j < n; j ++)
         {
             if (i != j)
             {
-                if (arr[i] == arr[j])
-                {
-                    found = 1;
-                }
+                if (arr1[i] == arr1[j])
+                    ctr++;
             }
         }
-        if (found == 0)
+
+        if (ctr == 0)
         {
-            printf("%d\n", arr[i]);
+            printf("\n%d\t", arr1[i]);
         }
     }
-
     return 0;
 }
