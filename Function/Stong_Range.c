@@ -17,7 +17,7 @@ int main()
 }
 int limit(int n, int m)
 {
-    printf("All prime number between this limit are: ");
+    printf("All strong number between this limit are: ");
 
     while (n <= m)
     {
