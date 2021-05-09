@@ -13,7 +13,7 @@ int main()
 int natural(int a, int b)
 {
     if (a >= b)
-        return 1;
+        return 0;
 
     printf("%d\t", a);
     natural(a + 1, b);
